@@ -3,9 +3,9 @@
 ## What is BOLA
 Broken Object Level Authorization is one of the most 
 common and dangerous API vulnerabilities. It occurs 
-when an API endpoint accepts an object reference — 
+when an API endpoint accepts an object reference 
 such as an ID in the URL path, query string, or 
-request body — and returns the requested resource 
+request body and returns the requested resource 
 without verifying that the requesting user is 
 authorized to access it.
 
@@ -13,8 +13,8 @@ authorized to access it.
 Modern applications are built API-first. A single API 
 backend can power a web UI, mobile app, third-party 
 integrations, and partner services simultaneously. 
-This architecture reduces development overhead but 
-significantly increases attack surface — every client 
+This architecture reduces development overhead and also a business enabler as you can rely on data from a specific industry instead of building a small software doing for doing same thing others are doing but rather allow you to focus on your speciality but 
+significantly increases attack surface; every client 
 that consumes the API is a potential attacker entry point.
 
 ## Why APIs Are More Exposed Than Traditional Web Apps
@@ -108,10 +108,11 @@ Given the endpoint: GET /api/v1/order/{order_id}
 
 An attacker authenticates with their own account 
 and observes their order ID in the response:
-`GET /api/v1/order/10001 200 Ok` 
+- GET /api/v1/order/10001 200 Ok 
+
 They then enumerate adjacent IDS (for other users):
-`GET /api/v1/order/10002`
-`GET /api/v1/order/10003`
+- GET /api/v1/order/10002
+- GET /api/v1/order/10003
 
 The API returns other users' order details — names, 
 prices, statuses — with no authorization check. 
@@ -177,12 +178,13 @@ existence information. An attacker enumerating IDs
 can distinguish between resources that exist and 
 resources that do not:
 
-`GET /api/v1/order/1001  →  403  (exists, not yours)`
-`GET /api/v1/order/1002  →  403  (exists, not yours)`
-`GET /api/v1/order/1003  →  404  (does not exist)`
-`GET /api/v1/order/1004  →  403  (exists, not yours)`
+- GET /api/v1/order/1001  →  403  (exists, not yours)
+- GET /api/v1/order/1002  →  403  (exists, not yours)
+- GET /api/v1/order/1003  →  404  (does not exist)
+- GET /api/v1/order/1004  →  403  (exists, not yours)
+
 This is the same principle behind username 
-enumeration via forgotten password functionality — 
+enumeration via forgotten password functionality, 
 different responses reveal the state of a resource.
 
 Some APIs return 404 for all unauthorized resources 
@@ -210,6 +212,5 @@ High sensitivity APIs should consider returning
   high sensitivity endpoints
 
 ## References
-- OWASP API Security Top 10: API1:2023
-- APIsec University — OWASP API Top 10 and Beyond
-- PortSwigger Web Security Academy — Access Control
+- [APIsec University — OWASP API Top 10 and Beyond](https://university.apisec.ai/products/owasp-api-security-top-10-and-beyond)
+- [PortSwigger Web Security Academy — Access Control](https://portswigger.net/web-security/access-control)

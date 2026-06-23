@@ -1,0 +1,30 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="certifi" />
+          <option value="chardet" />
+          <option value="click" />
+          <option value="dominate" />
+          <option value="Flask" />
+          <option value="Flask-Bootstrap" />
+          <option value="Flask-CKEditor" />
+          <option value="Flask-SQLAlchemy" />
+          <option value="Flask-WTF" />
+          <option value="idna" />
+          <option value="itsdangerous" />
+          <option value="Jinja2" />
+          <option value="MarkupSafe" />
+          <option value="requests" />
+          <option value="SQLAlchemy" />
+          <option value="urllib3" />
+          <option value="visitor" />
+          <option value="Werkzeug" />
+          <option value="WTForms" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
