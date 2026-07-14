@@ -65,7 +65,7 @@ Screenshot: ![User table disclosure](./evidence/api-authentication-api2-flag-cap
 - The user/details endpoint appears to return records unfiltered by the requesting user's identity — no ownership/ID check is applied before serialization, suggesting a SELECT * FROM users with no WHERE.
 
 ### Impact — Broken Authentication
-- This can lead to complete account takeover  ultimately leading to information disclosures
+- This can lead to complete account takeover ultimately leading to information disclosures
 - Broken authentication leading to horizontal privilege escalation.
 
 ### Impact — Excessive Data Exposure
